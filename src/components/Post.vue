@@ -42,8 +42,12 @@ import { db } from '../../firebase'
     })
 
     onMounted(() => {
-        hasLiked.value = likes.value.findIndex((like) =>  
+        if(!props.currentUser.name){
+            hasLiked.value = likes.value.findIndex((like) =>  
              like.id === props.currentUser.name) !== -1
+        }else{
+            hasLiked.value = false
+        }
     })
 
      
