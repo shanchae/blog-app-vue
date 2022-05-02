@@ -1,0 +1,144 @@
+header {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px -4px gray;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+
+    nav {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .3em 0;
+
+        .signed {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 1em;
+
+            .upload{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                position: relative;
+
+                .upload-text {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    background-color: #000;
+                    color: #fff;
+                    white-space: nowrap;
+                    border-radius: 7px;
+                    padding: 5px 8px;
+                    font-size: .6em;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        bottom: 100%;
+                        left: 50%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: transparent transparent black transparent;
+                    }
+
+                }
+
+                &:hover .upload-text {
+                    bottom: -120%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                svg {
+                    fill: #00AFC1;
+                    width: 24px;
+                }
+            }
+
+            .profile {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+    
+                .tooltip{
+                    position: relative;
+    
+                    .tooltip-text {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        transform: translateX(-50%);
+                        background-color: #000;
+                        color: #fff;
+                        white-space: nowrap;
+                        border-radius: 7px;
+                        padding: 5px 8px;
+                        font-size: .6em;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+    
+                        &:after {
+                            content: " ";
+                            position: absolute;
+                            bottom: 100%;
+                            left: 50%;
+                            margin-left: -5px;
+                            border-width: 5px;
+                            border-style: solid;
+                            border-color: transparent transparent black transparent;
+                        }
+                    }
+    
+    
+                    .profile-img {
+                        height: 2.5em;
+                        width: 2.5em;
+                        border: 2px solid #FFD124;
+                        border-radius: 2em;
+                        cursor: pointer;
+                    }
+    
+                    &:hover .tooltip-text {
+                        bottom: -30%;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                }
+            }
+        }
+
+        
+    }
+
+    button {
+        cursor: pointer;
+        background-color: #00AFC1;
+        border: none;
+        font-size: .9em;
+        color: #fff;
+        padding: .3em .8em;
+        border-radius: 2em;
+        transition: all .5s ease;
+
+        &:hover {
+            background-color: #006778;
+        }
+    }
+    h2 {
+        padding: .3em;
+    }
+}

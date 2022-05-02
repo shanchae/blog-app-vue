@@ -1,0 +1,80 @@
+.upload-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.775);
+    top: 0;
+    z-index: 50;
+
+    .upload {
+        background-color: #00AFC1;
+        border-radius: .5em;
+        padding: .8em;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        min-width: 300px;
+        margin: 0 auto;
+        height: max-content;
+        z-index: 100;
+        
+
+        .upload-text {
+            width: 100%;
+            border-radius: .5em;
+            padding: .5em;
+            border: none;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            margin-top: .5em;
+            gap: .5em;
+
+            #upload-file {
+                display: none;
+            }
+        
+            label {
+                background-color: white;   
+                padding: .2em .4em;
+                border: 1px solid black;
+                border-radius: .5em;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: max-content;
+                height: max-content;
+
+                svg {
+                    width: 20px;
+                    fill: #00AFC1;
+                }
+            }
+
+            .submit-btn{
+                background-color: white;
+                color: #00AFC1;
+                height: fit-content;
+                border: 1px solid black;
+                border-radius: .5em;
+                padding: .3em .5em;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .img-upload {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: .5em;
+        }
+        
+    }
+}
