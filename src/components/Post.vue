@@ -42,7 +42,7 @@ import { db } from '../../firebase'
     })
 
     onMounted(() => {
-        if(props.currentUser.name){
+        if(props.currentUser){
             hasLiked.value = likes.value.findIndex((like) =>  
              like.id === props.currentUser.name) !== -1
         }else{
@@ -52,7 +52,7 @@ import { db } from '../../firebase'
 
      
     const onLike = async () => {
-        if(props.currentUser.name){
+        if(props.currentUser){
             if (hasLiked){
                 await deleteDoc(doc(db, "posts", props.post.id, "likes", props.currentUser.name))
             } else{
